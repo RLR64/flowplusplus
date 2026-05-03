@@ -10,6 +10,7 @@ Flow++ provides ghost-text completions as you type. It pairs with clangd, which 
 
 - Inline ghost-text completions triggered after 3 characters
 - Covers C (C90 through C23) and C++ (C++11 through C++26)
+- Partial std::function types and I/O coverage
 - Full `std::` algorithm coverage
 - Full `std::ranges::` algorithm coverage (C++20, C++23, C++26)
 - Preprocessor directives and standard headers for both C and C++
