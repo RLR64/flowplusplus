@@ -16,7 +16,7 @@ Flow++ provides ghost-text completions as you type. It pairs with clangd, which 
 - Debounced suggestions to avoid flickering while typing
 - Language resolved by file extension — `.h` and `.hpp` handled correctly
 - Toggle on/off via the status bar, command palette, or extension settings
-- feature coverage.txt shows all what is covered
+- feature coverage.txt shows all what is covered in techinical detail
 
 ---
 
