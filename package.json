@@ -1,0 +1,67 @@
+{
+  "name": "flowplusplus",
+  "displayName": "Flow++",
+  "description": "Ghost text inline suggestions for C and C++ code",
+  "version": "0.1.0",
+  "publisher": "local",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RLR64/flowplusplus"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other", "Programming Languages"],
+  "keywords": ["c", "c++", "cpp", "autocomplete", "ghost text", "inline suggestions"],
+  "activationEvents": [
+    "onLanguage:c",
+    "onLanguage:cpp"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Flow++",
+      "properties": {
+        "flowplusplus.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable Flow++ inline suggestions"
+        },
+        "flowplusplus.triggerLength": {
+          "type": "number",
+          "default": 3,
+          "description": "Minimum characters to type before suggestions appear"
+        },
+        "flowplusplus.delay": {
+          "type": "number",
+          "default": 400,
+          "description": "Debounce delay in milliseconds before showing suggestions"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "flowplusplus.toggle",
+        "title": "Flow++: Toggle Inline Suggestions"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "editor.action.inlineSuggest.commit",
+        "key": "tab",
+        "when": "inlineSuggestionVisible && !editorTabMovesFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,101 @@
+# Flow++ Feature Coverage
+
+# C
+# Preprocessor
+- System headers `#include <`
+- Local headers `#include "`
+- `#pragma once`
+- `#define`, `#undef`
+- `#ifdef`, `#ifndef`, `#if defined(`
+- `#elif`, `#endif`
+- `#error`
+
+# Standard Headers
+- C90 — `assert.h`, `ctype.h`, `errno.h`, `float.h`, `limits.h`, `locale.h`, `math.h`, `setjmp.h`, `signal.h`, `stdarg.h`, `stddef.h`, `stdio.h`, `stdlib.h`, `string.h`, `time.h`, `wchar.h`, `wctype.h`
+- C99 — `complex.h`, `fenv.h`, `inttypes.h`, `stdbool.h`, `stdint.h`, `tgmath.h`
+- C11 — `stdalign.h`, `stdatomic.h`, `stdnoreturn.h`, `threads.h`, `uchar.h`
+- C23 — `stdbit.h`, `stdckdint.h`, `hazptr.h`
+
+# Keywords & Specifiers
+- `restrict`, `nullptr` (C23)
+- `const`, `struct`, `enum`, `union`, `typedef`
+- `unsigned`, `long`, `signed`
+- C11 — `_Alignas`, `_Alignof`, `_Atomic`, `_Bool`, `_Complex`, `_Generic`, `_Imaginary`, `_Noreturn`, `_Static_assert`, `_Thread_local`
+
+# Standard Library
+- Memory — `malloc`, `calloc`, `realloc`, `memcpy`, `memset`, `memmove`, `memcmp`
+- Strings — `strlen`, `strcpy`, `strncpy`, `strcmp`, `strncmp`, `strcat`, `strncat`, `strchr`, `strstr`, `strtok`
+- Conversion — `atoi`, `atol`, `atof`, `strtol`, `strtoul`, `strtod`
+- Math — `abs`, `fabs`, `sqrt`, `pow`, `floor`, `ceil`, `round`, `log`, `log2`, `log10`, `sin`, `cos`, `tan`
+- Utility — `rand`, `srand`, `exit`, `abort`, `assert`, `qsort`, `bsearch`, `time`, `clock`, `difftime`, `getenv`, `system`
+- Variadic — `va_list`, `va_start`, `va_arg`, `va_end`, `va_copy`
+
+# C Idioms
+- Array length — `sizeof(arr) / sizeof(arr[0])`
+- `errno`
+
+# C++
+# Preprocessor
+- Shared with C (see above)
+
+# Standard Headers
+- C++98 — `algorithm`, `bitset`, `complex`, `deque`, `exception`, `fstream`, `iomanip`, `ios`, `iostream`, `istream`, `iterator`, `list`, `locale`, `map`, `memory`, `new`, `numeric`, `ostream`, `queue`, `set`, `sstream`, `stack`, `stdexcept`, `streambuf`, `string`, `typeinfo`, `utility`, `valarray`, `vector`
+- C headers (C++ wrappers) — `cassert`, `cctype`, `cerrno`, `cfloat`, `climits`, `clocale`, `cmath`, `csetjmp`, `csignal`, `cstdarg`, `cstddef`, `cstdio`, `cstdlib`, `cstring`, `ctime`, `cwchar`, `cwctype`
+- C++11 — `atomic`, `cfenv`, `cinttypes`, `condition_variable`, `cstdint`, `cuchar`, `forward_list`, `future`, `initializer_list`, `mutex`, `random`, `ratio`, `regex`, `scoped_allocator`, `system_error`, `typeindex`, `type_traits`, `unordered_set`
+- C++17 — `any`, `charconv`, `execution`, `filesystem`, `memory_resource`, `optional`, `string_view`, `variant`
+- C++20 — `barrier`, `bit`, `compare`, `concepts`, `coroutine`, `format`, `latch`, `numbers`, `ranges`, `semaphore`, `source_location`, `span`, `stop_token`, `syncstream`, `version`
+- C++23 — `expected`, `flat_map`, `flat_set`, `generator`, `mdspan`, `print`, `spanstream`, `stacktrace`, `stdfloat`
+- C++26 — `contracts`, `debugging`, `hazard_pointer`, `hive`, `inplace_vector`, `linalg`, `meta`, `rcu`, `simd`, `text_encoding`
+
+# Keywords & Specifiers
+- Attributes — `[[deprecated]]`, `[[likely]]`, `[[nodiscard]]`, `[[unlikely]]`
+- `auto`, `const`, `constexpr`, `consteval`, `constinit`
+- `default`, `delete`, `explicit`, `final`, `friend`, `inline`, `override`, `virtual`
+- `noexcept`, `nullptr`, `nodiscard`
+- `namespace`, `typename`, `template`, `using`
+- Casts — `const_cast`, `dynamic_cast`, `reinterpret_cast`, `static_cast`
+- `static_assert`
+
+# std:: Types
+- Containers — `array`, `deque`, `forward_list`, `list`, `map`, `queue`, `set`, `stack`, `unordered_map`, `unordered_set`, `vector`
+- Smart pointers — `shared_ptr`, `unique_ptr`, `weak_ptr`, `make_shared`, `make_unique`
+- Utilities — `atomic`, `chrono`, `function`, `mutex`, `optional`, `pair`, `span`, `string`, `stringstream`, `thread`, `tuple`, `variant`
+
+# std:: Algorithms
+- Non-modifying sequence — `all_of`, `any_of`, `none_of`, `for_each`, `for_each_n`, `count`, `count_if`, `mismatch`, `find`, `find_if`, `find_if_not`, `find_end`, `find_first_of`, `adjacent_find`, `search`, `search_n`
+- Modifying sequence — `copy`, `copy_if`, `copy_n`, `copy_backward`, `move`, `move_backward`, `fill`, `fill_n`, `transform`, `generate`, `generate_n`, `remove`, `remove_if`, `remove_copy`, `remove_copy_if`, `replace`, `replace_if`, `replace_copy`, `replace_copy_if`, `swap`, `swap_ranges`, `iter_swap`, `reverse`, `reverse_copy`, `rotate`, `rotate_copy`, `shift_left`, `shift_right`, `shuffle`, `sample`, `unique`, `unique_copy`
+- Partitioning — `is_partitioned`, `partition`, `partition_copy`, `stable_partition`, `partition_point`
+- Sorting — `is_sorted`, `is_sorted_until`, `sort`, `partial_sort`, `partial_sort_copy`, `stable_sort`, `nth_element`
+- Binary search — `lower_bound`, `upper_bound`, `binary_search`, `equal_range`
+- Sorted range ops — `merge`, `inplace_merge`
+- Set operations — `includes`, `set_difference`, `set_intersection`, `set_symmetric_difference`, `set_union`
+- Heap operations — `is_heap`, `is_heap_until`, `make_heap`, `push_heap`, `pop_heap`, `sort_heap`
+
+# std::ranges:: Algorithms (C++20)
+- Non-modifying sequence — `adjacent_find`, `all_of`, `any_of`, `count`, `count_if`, `find`, `find_if`, `find_if_not`, `find_end`, `find_first_of`, `for_each`, `for_each_n`, `mismatch`, `none_of`, `search`, `search_n`
+- Modifying sequence — `copy`, `copy_if`, `copy_n`, `copy_backward`, `fill`, `fill_n`, `generate`, `generate_n`, `iter_swap`, `move`, `move_backward`, `remove`, `remove_if`, `remove_copy`, `remove_copy_if`, `replace`, `replace_if`, `replace_copy`, `replace_copy_if`, `reverse`, `reverse_copy`, `rotate`, `rotate_copy`, `sample`, `shift_left`, `shift_right`, `shuffle`, `swap_ranges`, `transform`, `unique`, `unique_copy`
+- Partitioning — `is_partitioned`, `partition`, `partition_copy`, `stable_partition`, `partition_point`
+- Sorting — `is_sorted`, `is_sorted_until`, `sort`, `partial_sort`, `partial_sort_copy`, `stable_sort`, `nth_element`
+- Binary search — `binary_search`, `equal`, `equal_range`, `lower_bound`, `upper_bound`
+- Sorted range ops — `merge`, `inplace_merge`
+- Set operations — `includes`, `set_difference`, `set_intersection`, `set_symmetric_difference`, `set_union`
+- Heap operations — `is_heap`, `is_heap_until`, `make_heap`, `push_heap`, `pop_heap`, `sort_heap`
+- Misc — `contains`
+
+# std::ranges:: Algorithms (C++23)
+- Fold — `fold_left`, `fold_left_first`, `fold_right`, `fold_right_last`, `fold_left_with_iter`, `fold_left_first_with_iter`
+- Find — `find_last`, `find_last_if`, `find_last_if_not`
+- Range checks — `starts_with`, `ends_with`, `contains_subrange`
+- Numeric — `iota`
+- Utility — `to`
+
+# std::ranges:: (C++26)
+- `approximately_sized_range`, `as_input_view`, `cache_latest_view`, `concat_view`, `reserve_hint`
+
+# Shared (C and C++)
+- Control flow — `switch`, `case`, `default`, `goto`, `break`, `continue`, `return`
+- Types — `uint8_t` through `uint64_t`, `int8_t` through `int64_t`, `size_t`, `ptrdiff_t`
+- Integer limits — `INT_MAX`, `INT_MIN`, `UINT_MAX`, `NULL`
+- Specifiers — `static`, `volatile`, `extern`, `inline`, `const`, `typedef`, `enum`, `struct`, `union`
+- I/O — `std::cout`, `std::cin`, `std::cerr`, `std::endl`
+- Numeric — `std::accumulate`

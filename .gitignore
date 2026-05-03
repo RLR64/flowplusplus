@@ -1,0 +1,18 @@
+# Build output
+out/
+
+# Extension package
+*.vsix
+
+# Dependencies
+node_modules/
+
+# VS Code test runner
+.vscode-test/
+
+# Source maps (optional — remove this line if you want to commit them)
+out/**/*.js.map
+
+# OS
+.DS_Store
+Thumbs.db

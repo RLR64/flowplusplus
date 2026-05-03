@@ -2,7 +2,7 @@
 
 A lightweight inline suggestion engine for C and C++ in VS Code and Cursor.
 
-Flow++ provides ghost-text completions as you type — no language server required for the suggestions themselves. It pairs with clangd, which handles diagnostics, signatures, and semantic completions. Flow++ handles the fast, prefix-driven suggestions for the standard library, preprocessor directives, keywords, and `std::ranges::` algorithms.
+Flow++ provides ghost-text completions as you type. It pairs with clangd, which handles diagnostics, signatures, and semantic completions. Flow++ handles the fast, prefix-driven suggestions for the standard library, preprocessor directives, keywords, and `std::ranges::` algorithms.
 
 ---
 
